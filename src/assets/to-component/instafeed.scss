@@ -1,0 +1,14 @@
+.feed-link {
+    .feed-image {
+        border-radius: .5rem;
+        margin: 1rem;
+        @media screen and (max-width: 760px) {
+            width: 40%;
+            margin: .5rem;
+        }
+        @media screen and (max-width: 600px) {
+            width: 90%;
+            margin: .5rem;
+        }
+    }
+}

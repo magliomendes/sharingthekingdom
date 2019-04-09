@@ -1,0 +1,28 @@
+@import '~assets/scss/styles.scss';
+
+.pedro-maglio-mendes-content {
+    text-align: right;
+    position: relative;
+    height: 5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    p {
+        font-size: 1.3rem;
+        display: inline-block;
+        margin-right: 1rem;
+        margin-bottom: 0;
+        &:first-child {
+            margin-right: .5rem;
+        }
+        &:nth-child(2) {
+            font-family: $medium-font;
+        }
+    }
+
+    a {
+        font-size: 2rem;
+        margin-right: 1rem;
+        cursor: pointer;
+    }
+}

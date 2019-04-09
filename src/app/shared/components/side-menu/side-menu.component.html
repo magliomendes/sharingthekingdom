@@ -1,0 +1,40 @@
+<div class="just-a-bg-color fixed-top" [ngStyle]="{'background-color': bgColor}">
+    <div class="row">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top container">
+            <a class="navbar-brand" routerLink="./home">
+                <img [src]="images" class="d-inline-block align-top" alt="">
+            </a>
+            <a class="navicon-button rarr navbar-toggler ml-auto" data-toggle="collapse" href="#navbarNav" role="button"
+                aria-expanded="false" aria-controls="navbarNav">
+                <div class="navicon mr-auto" [ngStyle]="{'background': fontColor}"
+                    [ngClass]="{'bColor w2Color': arrowToggle == 'bColor', 'wColor b2Color': arrowToggle == 'wColor'}">
+                </div>
+            </a>
+            <div collapseMenu class="collapse navbar-collapse text-center" [ngStyle]="{'background-color': bgColor}"
+                id="navbarNav">
+                <ul class="navbar-nav">
+                    <li (click)="checkRouter()" class="nav-item" routerLink="./calendar">
+                        <a data-toggle="collapse" data-target=".navbar-collapse" class="nav-link"
+                            [ngStyle]="{'color': fontColor}">Eventos</a>
+                    </li>
+                    <li (click)="checkRouter()" class="nav-item" routerLink="./store">
+                        <a data-toggle="collapse" data-target=".navbar-collapse" class="nav-link"
+                            [ngStyle]="{'color': fontColor}">Loja</a>
+                    </li>
+                    <li (click)="checkRouter()" class="nav-item" routerLink="./sections">
+                        <a data-toggle="collapse" data-target=".navbar-collapse" class="nav-link"
+                            [ngStyle]="{'color': fontColor}">Seções</a>
+                    </li>
+                    <li (click)="checkRouter()" class="nav-item" routerLink="./visiting">
+                        <a data-toggle="collapse" data-target=".navbar-collapse" class="nav-link"
+                            [ngStyle]="{'color': fontColor}">Nos visitou?</a>
+                    </li>
+                    <li (click)="checkRouter()" class="nav-item disabled" routerLink="./about-us">
+                        <a data-toggle="collapse" data-target=".navbar-collapse" class="nav-link"
+                            [ngStyle]="{'color': fontColor}">STK</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>

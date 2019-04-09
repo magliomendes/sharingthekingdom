@@ -1,0 +1,95 @@
+@import '~assets/scss/styles.scss';
+.stk-guest {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color: $color-white;
+    .stk-images {
+        max-height: 25rem;
+        min-height: 25rem;
+        height: 25rem;
+        position: relative;
+        .stk-family {
+            background-size: cover;
+            background-position: 100% 85%;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            transition: .4s;
+            animation: fadein 2s;
+        }
+        .stk-city-layer {
+            background-size: cover;
+            background-position: 100% 45%;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            opacity: 0.6;
+            transition: .4s;
+            animation: fadein2 2s;
+        }
+    }
+    .stk-form {
+        margin-bottom: 8rem;
+        transition: .4s;
+        p {
+            text-align: justify;
+            font-size: 2rem;
+            font-family: $primary-font;
+            color: $color-black;
+            max-width: 70rem;
+            margin: auto;
+        }
+        .stk-inputs {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            flex-direction: column;
+            max-width: 70rem;
+            margin: auto;
+            textarea {
+                height: 15rem;
+            }
+        }
+        @media (max-height: 1359px) {
+            margin-top: 6rem;
+        }
+        @media (max-width: 770px) {
+            margin-top: 2rem;
+            p {
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
+img.ng-lazyloaded {
+    animation: fadein .75s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadein2 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: .6;
+    }
+}

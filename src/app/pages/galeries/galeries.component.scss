@@ -1,0 +1,86 @@
+@import '~assets/scss/styles.scss';
+.change-bg {
+    background-color: $color-white;
+    transition: 1s;
+    .container {
+        .row {
+            .stk-galery {
+                background-color: $color-white;
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .instafeed {
+                    margin-top: 2rem;
+                    margin-bottom: 8rem;
+                    display: block;
+                    text-align: center;
+                    background-color: $color-white;
+                }
+            }
+            .back {
+                margin-top: 8rem;
+                cursor: pointer;
+                a {
+                    position: relative;
+                    display: flex;
+                    overflow: hidden;
+                    vertical-align: middle;
+                    text-align: left;
+                    text-decoration: none;
+                    line-height: 3em;
+                    font-size: 1rem;
+                    color: $color-black;
+                    cursor: pointer;
+                    transform: translateZ(0);
+                    transition: transform .5s;
+                    svg {
+                        z-index: 1;
+                        margin: auto;
+                        text-align: center;
+                        width: 100%;
+                        g {
+                            line,
+                            polyline,
+                            circle {
+                                fill: none;
+                                stroke: $color-black;
+                            }
+                            line,
+                            polyline {
+                                stroke-miterlimit: 10;
+                            }
+                            circle {
+                                display: block;
+                                stroke-linecap: round;
+                                stroke-linejoin: round;
+                                stroke-width: .066em;
+                                stroke-dasharray: 200;
+                                stroke-dashoffset: 0;
+                                transition: stroke-dashoffset ease-out .5s;
+                                r: 1.8rem;
+                            }
+                        }
+                    }
+                    &:hover, &:active {
+                        transform: translateZ(0) translateX(.5em);
+                        svg {
+                            g {
+                                circle {
+                                    stroke-dashoffset: 200;
+                                }
+                            }
+                        }
+                    }
+                }
+                p {
+                    font-size: 1.8rem;
+                    font-family: $light-font;
+                    color: $color-black;
+                    display: inline-block;
+                    position: absolute;
+                }
+            }
+        }
+    }
+}

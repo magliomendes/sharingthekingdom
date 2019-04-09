@@ -1,0 +1,37 @@
+<stk-loading *ngIf="!loading"></stk-loading>
+<div class="stk-devotional-by-id">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 back">
+                <a (click)="backToList()">
+                    <svg height="50">
+                        <g>
+                            <line y1="50%" x2="98%" y2="50%"></line>
+                            <circle cx="98%" cy="50%"></circle>
+                        </g>
+                    </svg>
+                    <p>
+                        Voltar | Devocionais
+                    </p>
+                </a>
+            </div>
+            <div class="col-12 title">
+                <p>
+                    {{devotional?.title}}
+                </p>
+            </div>
+
+            <!-- <div class="col-12 image" [ngStyle]="{'background-image': 'url(' + devotional?.imageKey+ ')'}"></div> -->
+
+            <div class="col-12 description">
+                <p>
+                    {{devotional?.description}}
+                </p>
+            </div>
+
+            <div class="col-8 stk-logo">
+                <img src="/assets/images/icones-legenda-preto.svg" alt="">
+            </div>
+        </div>
+    </div>
+</div>

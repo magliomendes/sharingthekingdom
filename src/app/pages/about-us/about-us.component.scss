@@ -1,0 +1,206 @@
+@import '~assets/scss/styles.scss';
+.stk-about-initial {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    margin: 0;
+    transition: .5s;
+    .stk-color-layer {
+        background-color: $color-blue;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        opacity: .45;
+    }
+    .stk-limit {
+        .stk-description {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: .1rem solid $color-black;
+            color: $color-black;
+            padding: 1rem;
+            min-height: 70vh;
+            margin-top: 12rem;
+            @media (min-width: 960px) {
+                min-height: 50vh;
+            }
+            &:before {
+                position: absolute;
+                top: -0.5rem;
+                right: 0;
+                content: '';
+                display: block;
+                width: 100%;
+                height: .1rem;
+                background-color: $color-yellow;
+            }
+            &:after {
+                position: absolute;
+                top: -2rem;
+                content: 'SHARING THE KINGDOM';
+                font-size: 2rem;
+                padding: 0 1rem;
+                background-color: $color-red;
+                font-family: $medium-font;
+                animation-name: earthquake2;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+                animation-delay: 0;
+            }
+            p {
+                max-width: 90rem;
+                color: $color-white;
+                font-family: $medium-font;
+                text-align: center;
+            }
+        }
+        .stk-social {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: .1rem solid $color-black;
+            color: $color-black;
+            margin-bottom: 2rem;
+            .fa {
+                padding: 0.6rem 0.6rem;
+                color: $color-white;
+                transition: color 140ms ease;
+                margin: 1rem 1rem;
+                font-size: 3rem;
+                cursor: pointer;
+                &:after {
+                    position: absolute;
+                    right: 0;
+                    bottom: 4.5rem;
+                    z-index: 20;
+                    content: attr(data-tip);
+                    display: block;
+                    width: auto;
+                    font-size: 2rem;
+                    color: $color-red;
+                    background-color: $color-yellow;
+                    padding: 1rem;
+                    opacity: 0;
+                    pointer-events: none;
+                    transform: translateY(1rem);
+                    transition: all 300ms ease 200ms;
+                    font-family: $medium-font;
+                }
+                &:hover {
+                    color: $color-yellow;
+                    text-decoration: none;
+                    &:after {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+            }
+            &:before {
+                position: absolute;
+                top: -0.5rem;
+                right: 0;
+                content: '';
+                display: block;
+                width: 100%;
+                height: .1rem;
+                background-color: $color-yellow;
+            }
+            &:after {
+                position: absolute;
+                top: -2rem;
+                @media (min-width: 960px) {
+                    right: 1rem;
+                }
+                content: 'Acompanhe também';
+                font-size: 2rem;
+                padding: 0 1rem;
+                background-color: $color-red;
+                font-family: $medium-font;
+                animation-name: earthquake;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+                animation-delay: 0;
+            }
+        }
+        .stk-logo {
+            background-image: url(/assets/images/icones-legenda-branco.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 100%;
+            height: 15rem;
+            max-width: 40rem;
+            margin: auto;
+            margin-bottom: 8rem;
+            z-index: 3;
+        }
+        .pedro-maglio-mendes-content {
+            margin-bottom: 1rem;
+            text-align: right;
+            position: relative;
+            p {
+                color: $color-white;
+                display: inline-block;
+                margin-right: 1rem;
+                &:first-child {
+                    margin-right: .5rem;
+                }
+                &:nth-child(2) {
+                    color: $color-yellow-stronger;
+                }
+            }
+            a {
+                font-size: 2.4rem;
+                color: $color-white;
+                margin-right: .5rem;
+            }
+        }
+    }
+}
+
+@keyframes earthquake {
+    0% {
+        transform: rotate(0)
+    }
+    15% {
+        transform: rotate(2deg)
+    }
+    30% {
+        transform: rotate(-2deg)
+    }
+    45% {
+        transform: rotate(1deg)
+    }
+    60% {
+        transform: rotate(0)
+    }
+}
+
+@keyframes earthquake2 {
+    50% {
+        transform: rotate(0)
+    }
+    65% {
+        transform: rotate(2deg)
+    }
+    80% {
+        transform: rotate(-2deg)
+    }
+    95% {
+        transform: rotate(1deg)
+    }
+    100% {
+        transform: rotate(0)
+    }
+}

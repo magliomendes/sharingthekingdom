@@ -1,0 +1,71 @@
+<stk-loading *ngIf="!loading"></stk-loading>
+<div class="stk-store-list">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-12 store-filter">
+                <p class="title">Produtos</p>
+                <p class="category">Roupas</p>
+                <div class="category-content">
+                    <p class="selected">Camisas e Blusas</p>
+                </div>
+                <p class="category">Tamanhos</p>
+                <div class="filter-content">
+                    <p (click)="onFilter('PP')" [ngClass]="{'selected': selectedFilter === 'PP'}">PP</p>
+                    <p (click)="onFilter('P')" [ngClass]="{'selected': selectedFilter === 'P'}">P</p>
+                    <p (click)="onFilter('M')" [ngClass]="{'selected': selectedFilter === 'M'}">M</p>
+                    <p (click)="onFilter('G')" [ngClass]="{'selected': selectedFilter === 'G'}">G</p>
+                    <p (click)="onFilter('GG')" [ngClass]="{'selected': selectedFilter === 'GG'}">GG</p>
+                </div>
+                <p class="clean-filter" (click)="onFilter('')">
+                    Limpar filtro
+                </p>
+            </div>
+            <div class="col-md-3 col-12 store-filter-collapse">
+                <p class="title expandable-title" data-toggle="collapse" data-target="#filterMenu" aria-expanded="false"
+                    aria-controls="filterMenu">Filtros</p>
+                <div class="collapse" id="filterMenu">
+                    <p class="category">Roupas</p>
+                    <div class="category-content">
+                        <p class="selected">Camisas e Blusas</p>
+                    </div>
+                    <p class="category">Tamanhos</p>
+                    <div class="filter-content">
+                        <p (click)="onFilter('PP')" [ngClass]="{'selected': selectedFilter === 'PP'}">PP</p>
+                        <p (click)="onFilter('P')" [ngClass]="{'selected': selectedFilter === 'P'}">P</p>
+                        <p (click)="onFilter('M')" [ngClass]="{'selected': selectedFilter === 'M'}">M</p>
+                        <p (click)="onFilter('G')" [ngClass]="{'selected': selectedFilter === 'G'}">G</p>
+                        <p (click)="onFilter('GG')" [ngClass]="{'selected': selectedFilter === 'GG'}">GG</p>
+                    </div>
+                    <p class="clean-filter" (click)="onFilter('')">
+                        Limpar filtro
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-9 col-12 m-auto">
+                <div class="row" [@slideDownTilt]="storeListOriginal?.length">
+                    <div class="col-10 col-md-6 col-lg-4 stk-item" *ngFor="let store of storeListOriginal"
+                        (click)="onStoreClick(store.id)">
+                        <div class="images">
+                            <div class="onImageNotHover" [defaultImage]="defaultImage" [lazyLoad]="store.Fotos[3]"
+                                [offset]="offset"></div>
+                            <div class="onImageHover" [defaultImage]="defaultImage" [lazyLoad]="store.Fotos[0]"
+                                [offset]="offset"></div>
+                        </div>
+                        <div class="sizes">
+                            <div class="size" *ngFor="let sizes of store.Tamanhos">{{sizes}}</div>
+                        </div>
+                        <div class="product">
+                            <p>{{store.Item}}</p>
+                            <h2>R${{store.Valor}}</h2>
+                            <!-- <p class="desc">Algodão</p> -->
+                            <button class="btn btn-danger">VER PRODUTO</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <pedro-maglio-mendes [needsContrast]="true"></pedro-maglio-mendes>
+</div>

@@ -1,0 +1,88 @@
+@import '~assets/scss/styles.scss';
+* {
+    transition: .4s;
+}
+
+.stk-sections {
+    height: 100vh;
+    min-height: 55rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color: $color-white;
+    .sections-op {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .stk-section {
+            height: 40vh;
+            max-height: 40rem;
+            width: 90vw;
+            max-width: 90rem;
+            background-color: #FFF;
+            border-radius: 2rem;
+            padding: 0;
+            position: relative;
+            margin: 1rem auto;
+            &:first-child{
+                margin-top: 8rem
+            }
+            cursor: pointer;
+            .image-fotos {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 2rem;
+            }
+            .color-gradient {
+                &-1 {
+                    background-image: linear-gradient(to right, #3a6186 80%, #89253e 100%);
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    position: absolute;
+                    opacity: .5;
+                    border-radius: 2rem;
+                }
+                &-2 {
+                    background-image: linear-gradient(to right, #556270 80%, #ff6b6b 100%);
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    position: absolute;
+                    opacity: .5;
+                    border-radius: 2rem;
+                }
+            }
+            .actions-content {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                p {
+                    color: #FFF;
+                    font-family: $thin-font;
+                    font-size: 5vw;
+                    letter-spacing: .5rem;
+                    @media (max-width: 996px) {
+                        font-size: 5rem;
+                    }
+                    @media (max-width: 767px) {
+                        font-size: 4.5rem;
+                    }
+                    @media (min-width: 1440px) {
+                        font-size: 8rem;
+                    }
+                }
+            }
+        }
+    }
+}

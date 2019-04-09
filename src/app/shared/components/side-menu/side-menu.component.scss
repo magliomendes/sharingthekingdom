@@ -1,0 +1,117 @@
+@import '~assets/scss/styles.scss';
+$duration: .5s;
+.just-a-bg-color {
+    height: 6rem;
+    width: 100vw;
+}
+
+.navbar {
+    width: 100vw;
+    transition: .2s;
+    margin: auto;
+    min-height: 5rem;
+    height: 6rem;
+    max-height: 6rem;
+    cursor: pointer;
+    .navbar-collapse {
+        @media screen and (min-width: 996px) {
+            background-color: transparent !important;
+        }
+        @media screen and (max-width: 996px) {
+            width: 100vw;
+            left: 0px;
+            position: fixed;
+            top: 6rem;
+        }
+        justify-content: flex-end;
+        .navbar-nav {
+            .nav-item {
+                @media screen and (max-width: 996px) {
+                    width: 100%;
+                }
+                &:last-child {
+                    @media screen and (max-width: 996px) {
+                        margin-bottom: 1rem;
+                    }
+                }
+                cursor: pointer;
+                pointer-events: all;
+                a {
+                    font-family: $medium-font;
+                    font-size: 1.65rem;
+                    transition: .1s;
+                    letter-spacing: .15rem;
+                    @media screen and (max-width: 996px) {
+                        font-size: 1.8rem;
+                    }
+                    img {
+                        min-width: 22rem;
+                    }
+                }
+            }
+        }
+    }
+    .navbar-brand {
+        max-width: 34rem;
+        width: 77vw;
+        img {
+            min-width: 27rem;
+        }
+    }
+    .navicon-button {
+        position: relative;
+        padding: 2.0625rem 1rem;
+        cursor: pointer;
+        user-select: none;
+        opacity: .8;
+        outline: none !important;
+        border: 0;
+        margin-top: -.5rem;
+        border-radius: 50%;
+        .navicon:before,
+        .navicon:after {
+            transition: $duration/2;
+        }
+        &:active {
+            transform: scale(.8);
+        }
+    }
+    .navicon {
+        position: relative;
+        width: 1.5rem;
+        height: .3125rem;
+        transition: $duration;
+        border-radius: 2rem;
+        outline: none !important;
+        &:before,
+        &:after {
+            display: block;
+            content: "";
+            height: .3125rem;
+            width: 1.25rem;
+            position: absolute;
+            z-index: -1;
+            transition: $duration $duration/2;
+            border-radius: 1rem;
+        }
+        &:before {
+            top: .625rem;
+        }
+        &:after {
+            top: -.625rem;
+        }
+        &.bColor:after,
+        .bColor:before {
+            background: $color-black;
+        }
+        &.b2Color:before {
+            background: #FFF;
+        }
+        &.wColor:after {
+            background: #FFF;
+        }
+        &.w2Color:before {
+            background: $color-black;
+        }
+    }
+}

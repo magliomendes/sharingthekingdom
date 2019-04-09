@@ -1,0 +1,30 @@
+<div class="stk-guest p-0">
+  <div class="row w-100 h-100 p-0 d-flex">
+    <div class="col-12 w-100 p-0 position-relative stk-images">
+      <div class="stk-family" [defaultImage]="defaultImage" [lazyLoad]="stkFamily" [offset]="offset"></div>
+      <div class="stk-city-layer" [defaultImage]="defaultImage" [lazyLoad]="stkCityLayer" [offset]="offset"></div>
+    </div>
+    <div class="container col-12 stk-form w-100">
+      <p>
+        Queremos te conhecer, queremos orar por você, queremos ser família onde todos tentam te convencer que não existe
+        mais.
+      </p>
+      <form [formGroup]="visitingForm" class="stk-inputs">
+        <input type="text" placeholder="Nome" formControlName="nome">
+        <input type="text" placeholder="Celular" formControlName="celular">
+        <input type="text" placeholder="É de alguma igreja? Se sim, Qual?" formControlName="igreja">
+        <input type="text" placeholder="Como nos conheceu?" formControlName="ondeConheceu">
+        <textarea
+          placeholder="Estamos querendo orar por você. Sinta-se avontade para fazer um pedido de oração ou dedicar-se a algo"
+          formControlName="pedido"></textarea>
+        <button *ngIf="confirmation.length < 1" class="btn btn-secondary" (click)="sendForm()"
+          [disabled]="visitingForm.invalid">Enviar</button>
+        <p *ngIf="confirmation.length > 1">{{confirmation}}</p>
+      </form>
+    </div>
+    <div class="container">
+        <pedro-maglio-mendes [needsContrast]="true"></pedro-maglio-mendes>
+    </div>
+  </div>
+</div>
+<stk-loading *ngIf="loading"></stk-loading>

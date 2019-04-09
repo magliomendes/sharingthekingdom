@@ -1,0 +1,63 @@
+<stk-loading *ngIf="!loading"></stk-loading>
+<div class="bg-color">
+    <div class="stk-store-by-id">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 back">
+                    <a (click)="backToList()">
+                        <svg height="50">
+                            <g>
+                                <line y1="50%" x2="98%" y2="50%"></line>
+                                <circle cx="98%" cy="50%"></circle>
+                            </g>
+                        </svg>
+                        <p>
+                            Voltar | Loja
+                        </p>
+                    </a>
+                </div>
+                <div class="col-12 col-md-7 product-gallery">
+                    <div class="product-image">
+                        <img #activeImage class="active" [defaultImage]="defaultImage" [lazyLoad]="lazyLoad"
+                            [offset]="offset" />
+                    </div>
+                    <div class="image-list">
+                        <div class="image-src" *ngFor="let fotos of store?.Fotos">
+                            <img #imageList [src]="fotos" (click)="changeImage($event)">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 product-description">
+                    <p class="product-name">{{store?.Item}}</p>
+                    <!-- <div class="description">
+                    <p>Algodão</p>
+                </div> -->
+                    <div class="sizes">
+                        <div class="size" *ngFor="let sizes of store?.Tamanhos">{{sizes}}</div>
+                    </div>
+                    <div class="product-action">
+                        <div>
+                            <p class="product-price">R${{store?.Valor}}</p>
+                            <p class="product-price" *ngIf="newFreight != undefined"> + R${{newFreight}}</p>
+                        </div>
+                        <button class="btn btn-danger disabled">INDISPONÍVEL</button>
+                    </div>
+                    <div class="not-available">
+                        <p>
+                            Produto ainda não disponível para compra online! Aguarde!
+                        </p>
+                    </div>
+                    <!-- <div class="freight-calculation">
+                    <div class="d-flex justify-content-around align-items-center">
+                        <input type="number" placeholder="CEP" [(ngModel)]="newFreight">
+                        <button class="btn btn-green btn-small" (click)="addFreight(newFreight)">Calcular frete</button>
+                    </div>
+                </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <pedro-maglio-mendes [needsContrast]="true"></pedro-maglio-mendes>
+    </div>
+</div>
