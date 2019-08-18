@@ -11,7 +11,7 @@ import { SectionsComponent } from './sections/sections.component';
 import { GaleriesComponent } from './galeries/galeries.component';
 import { SharedModule } from '@shared/modules/shared.module';
 import { VisitingFormComponent } from './visitingForm/visitingForm.component';
-// import { InstagramPostsComponent } from './instagram-posts/instagram-posts.component';
+import { InstagramPostsComponent } from './instagram-posts/instagram-posts.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { VisitingFormComponent } from './visitingForm/visitingForm.component';
     GaleriesComponent,
     CalendarComponent,
     VisitingFormComponent,
-    // InstagramPostsComponent
+    InstagramPostsComponent
   ],
   imports: [
     pagesRouting,

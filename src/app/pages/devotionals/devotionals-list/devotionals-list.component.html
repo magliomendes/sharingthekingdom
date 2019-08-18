@@ -15,7 +15,7 @@
                     </p>
                 </a>
             </div>
-            <div class="card col-md-4 col-12 mt-3 mb-3" *ngFor="let devotional of devotionalList"
+            <div class="card col-md-4 col-12 mt-3 mb-3 max-card-width" *ngFor="let devotional of devotionalList"
                 (click)="onDevotionalClick(devotional.id)">
                 <div class="card-img" [defaultImage]="defaultImage" [lazyLoad]="devotional?.imageKey" [offset]="offset">
                 </div>
@@ -23,6 +23,7 @@
                     <span class="card-category"> {{devotional?.title}}</span>
                     <h3 class="card-title">{{devotional?.description}}</h3>
                 </div>
+                <div class="new-badge">NOVO!</div>
             </div>
         </div>
         <pedro-maglio-mendes [needsContrast]="true"></pedro-maglio-mendes>

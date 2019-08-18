@@ -1,17 +1,14 @@
-// import { Component, OnInit } from "@angular/core";
-// import { Router } from "@angular/router";
+import { Component, OnInit } from "@angular/core";
 
-// @Component({
-//     selector: 'stk-instagram-posts',
-//     templateUrl: './instagram-posts.component.html',
-//     styleUrls: ['./instagram-posts.component.scss']
-// })
+@Component({
+    selector: 'stk-instagram-posts',
+    templateUrl: './instagram-posts.component.html',
+    styleUrls: ['./instagram-posts.component.scss']
+})
 
-// export class InstagramPostsComponent implements OnInit {
+export class InstagramPostsComponent  {
 
-//     constructor(
-//     ) { }
+    constructor(
+    ) { }
 
-//     ngOnInit() {
-//     }
-// }
+}

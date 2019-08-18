@@ -26,7 +26,7 @@ export class VisitingFormComponent implements OnInit {
         this.visitingForm = fb.group({
             nome: ['', Validators.required],
             celular: ['', Validators.required],
-            igreja: ['', Validators.required],
+            igreja: [''],
             ondeConheceu: ['', Validators.required],
             pedido: ['', Validators.required],
         });

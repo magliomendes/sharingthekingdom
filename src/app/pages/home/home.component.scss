@@ -1,7 +1,5 @@
 @import '~assets/scss/styles.scss';
-.bg-color {
-    background: #4e4376;
-}
+
 .home-stk {
     min-height: 100vh;
     height: auto;
@@ -10,228 +8,42 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background: linear-gradient(#2b5867, #4e4376);
-    .home-state-stk {
-        margin: auto;
-        @media (max-height: 560px) {
-            margin: 8rem auto;
-        }
-        .stk-calendar {
-            width: 100%;
-            height: auto;
-            min-height: 40rem;
-            text-align: right;
-            margin: auto;
-            @media (max-width: 768px) {
-                text-align: center;
+    background-image: url("https://i.pinimg.com/originals/27/44/bc/2744bce45ca50723ce81aded909090fc.jpg");
+    background-position: center;
+    background-size: cover;
+
+    .conference-name {
+
+        p {
+            font-size: 10rem;
+            color: #ccff00;
+            font-family: $black-font;
+            line-height: .85;
+
+            @media screen and (max-width: 768px) {
+                font-size: 7rem;
             }
-            p {
-                font-family: $light-font;
-                color: $color-white;
-                margin-bottom: 0;
-                letter-spacing: 1rem;
-                line-height: 1;
-                margin: auto;
-                &:first-child {
-                    font-size: 39rem;
-                    padding: 0;
-                    text-align: center;
-                    @media (max-width: 768px) {
-                        font-size: 20rem;
-                    }
-                }
-                &:nth-child(2) {
-                    font-family: $thin-font;
-                    font-size: 8vw;
-                    @media (min-width: 768px) {
-                        font-size: 8vw;
-                    }
-                }
-            }
-            .more-about {
-                display: flex;
-                align-items: center;
-                justify-content: flex-end;
-                width: 100%;
-                margin-bottom: 1.5rem;
-                margin-top: 2rem;
-                z-index: 2;
-                @media (max-width: 768px) {
-                    justify-content: center;
-                }
-                p {
-                    font-size: 2.5rem;
-                    color: $color-white;
-                    margin: 0;
-                    cursor: pointer;
-                    @media (max-width: 768px) {
-                        font-size: 1.6rem;
-                    }
-                }
+
+            @media screen and (max-width: 568px) {
+                font-size: 4rem;
             }
         }
-        .svg-wrapper {
-            position: absolute;
-            top: 0;
-            margin: 0 auto;
-            width: 100%;
-            height: 100%;
-            min-height: 40rem;
-            z-index: 1;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            border-radius: 2rem;
-            svg {
-                height: 100%;
-                width: 100%;
-                .shape1 {
-                    stroke-width: .2rem;
-                    fill: transparent;
-                    stroke: $color-white;
-                    height: 100%;
-                    width: 100%;
-                }
-                .shape1 {
-                    stroke-dashoffset: 1000;
-                    animation: strokeBorder 60s infinite linear;
-                    animation-delay: 0s;
-                    animation-play-state: running;
-                }
+
+        span {
+            font-size: 4.5rem;
+
+            @media screen and (max-width: 768px) {
+                font-size: 3.5rem;
             }
+
+            @media screen and (max-width: 568px) {
+                font-size: 2.5rem;
+            }
+
+            font-family: $medium-font;
+            line-height: 1.1;
+            color: #ccff00;
+            cursor: pointer;
         }
     }
 }
-
-@keyframes strokeBorder {
-    0% {
-        stroke-dashoffset: 1120;
-        stroke-dasharray: 500;
-    }
-    55% {
-        stroke-dashoffset: 560;
-        stroke-dasharray: 1000;
-    }
-    100% {
-        stroke-dashoffset: 1120;
-        stroke-dasharray: 500;
-    }
-}
-
-// .stk-title {
-//     img {
-//         width: 10rem;
-//         height: 5rem;
-//         display: flex;
-//         margin: auto;
-//         transform: scale(3.25);
-//     }
-// } 
-// //DYNAMIC WORDS
-// .rw-wrapper {
-//     width: 100%;
-//     position: relative;
-//     margin: -10rem auto 0 auto;
-//     padding: 1rem;
-//     overflow-x: hidden;
-//     overflow-y: hidden;
-//     .rw-sentence {
-//         text-align: center;
-//         margin: 0 auto;
-//         text-transform: uppercase;
-//     }
-// }
-// .rw-sentence span {
-//     color: #fff;
-//     white-space: nowrap;
-// }
-// .rw-sentence>span:first-child {
-//     display: block;
-//     text-indent: .5rem;
-//     font-size: 2.5rem;
-//     font-family: $medium-font;
-// }
-// .rw-words {
-//     width: 100%;
-//     height: 5rem;
-//     @media (max-width: 768px) {
-//         height: 2.5rem;
-//     }
-//     -webkit-perspective: 8rem;
-//     perspective: 8rem;
-// }
-// .rw-words span {
-//     position: absolute;
-//     width: 100%;
-//     opacity: 0;
-//     white-space: nowrap;
-//     overflow: hidden;
-//     left: 0;
-// }
-// .rw-words-1 span {
-//     font-size: 7rem;
-//     @media (max-width: 768px) {
-//         font-size: 3.5rem;
-//     }
-//     line-height: 1;
-//     font-family: $semibold-font;
-//     color: $color-opaco-gray;
-// }
-// .rw-words-2 span {
-//     font-size: 5rem;
-//     @media (max-width: 768px) {
-//         font-size: 2.5rem;
-//     }
-//     font-family: $bold-font;
-//     text-indent: .5rem;
-//     line-height: 1.2;
-//     color: #fff;
-// } // Next page arrow
-// .arrow-container {
-//     width: 10rem;
-//     height: 10rem;
-//     margin: 0 auto;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     position: absolute;
-//     bottom: 4rem;
-//     cursor: pointer;
-//     .circle-background {
-//         width: 10rem;
-//         height: 10rem;
-//         background: #FFF;
-//         opacity: 0.5;
-//         border-radius: 50%;
-//         position: absolute;
-//     }
-//     .arrow-circle {
-//         width: 6rem;
-//         height: 6rem;
-//         background: transparent;
-//         border-radius: 50%;
-//         position: absolute;
-//         z-index: 1;
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         &:before {
-//             width: 6rem;
-//             height: 6rem;
-//             content: "";
-//             border: 0.2rem solid #fff;
-//             opacity: .5;
-//             border-radius: 50%;
-//             position: absolute;
-//             display: flex;
-//             justify-content: center;
-//             align-items: center;
-//         }
-//         .arrows {
-//             position: absolute;
-//             margin-top: .5rem;
-//             background-color: transparent;
-//             color: rgba(255, 255, 255, .7)
-//         }
-//     }
-// }

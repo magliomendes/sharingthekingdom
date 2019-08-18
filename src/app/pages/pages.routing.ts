@@ -7,7 +7,7 @@ import { ModuleWithProviders } from '@angular/core';
 import { SectionsComponent } from './sections/sections.component';
 import { GaleriesComponent } from './galeries/galeries.component';
 import { VisitingFormComponent } from './visitingForm/visitingForm.component';
-// import { InstagramPostsComponent } from './instagram-posts/instagram-posts.component';
+import { InstagramPostsComponent } from './instagram-posts/instagram-posts.component';
 
 export const pagesRouting: ModuleWithProviders = RouterModule.forChild([
     {
@@ -21,7 +21,7 @@ export const pagesRouting: ModuleWithProviders = RouterModule.forChild([
             { path: 'store', loadChildren: './store/store.module#StoreModule' },
             { path: 'devotionals', loadChildren: './devotionals/devotionals.module#DevotionalModule' },
             // used to share news on social midias
-            // { path: 'instagram-posts-making-private', component: InstagramPostsComponent },
+            { path: 'instagram-posts-making-private', component: InstagramPostsComponent },
             { path: '**', redirectTo: 'home', pathMatch: 'full' },
         ]
     },

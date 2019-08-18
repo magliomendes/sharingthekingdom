@@ -20,7 +20,7 @@ export class GaleriesComponent implements DoCheck {
             get: 'user',
             sortBy: 'most-recent',
             userId: '5405478335',
-            accessToken: '5405478335.e4c9085.14d393aab88f4b06a47f2ed98e552c90',
+            accessToken: '5405478335.e4c9085.63d7aeb3e1074d56adf36f0c2b4df4da',
             resolution: 'low_resolution',
             template: '<a href="{{link}}" class="feed-link"><img src="{{image}}" class="feed-image" /></a>'
         }).run();

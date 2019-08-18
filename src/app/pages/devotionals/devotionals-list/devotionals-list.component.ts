@@ -24,6 +24,9 @@ export class DevotionalsListComponent implements OnInit {
         this.afs.collection('STK_Devotional_Cards').get().subscribe((snap) => {
             snap.forEach((doc) => {
                 this.devotionalList.push(doc.data() as Devotionals);
+                this.devotionalList = this.devotionalList.sort((a, b) => {
+                    return b.id - a.id
+                })
                 if (this.devotionalList.length === snap.size) {
                     setTimeout(() => {
                         this.loading = true;
